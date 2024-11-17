@@ -12,11 +12,11 @@ redirect_from:
 Education
 ======
 * 10/2019 - 04/2022: M.Sc. in Automotive Engineering, University of Stuttgart
-* 10/2016 - 09/2019: B.Eng. in Mechanical Engineering, Cooperative State University Baden-Wuerttemberg (DHBW)
+* 10/2016 - 09/2019: B.Eng. in Mechanical Engineering, Baden-Wuerttemberg Cooperative State University (DHBW)
 
 Work experience
 ======
-* 10/2014 - Present: Research Assistant, Autonomous Intellgent Systems, University of Bonn
+* 10/2024 - Present: Research Assistant, Autonomous Intellgent Systems, University of Bonn
 * 04/2023 - 06/2024: Adjunct Lecturer
   * Teaching of a Python lecture for undergraduates (30 students)
   * Teaching of a lecture on safety and validation of deep learning systems (with a focus on autonomous driving) for undergraduates (30 students)
