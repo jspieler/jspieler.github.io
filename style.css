@@ -6,7 +6,7 @@ h1, h2 {color: #345;}
 * {font-weight: normal; font-family: Inter, system-ui, Roboto, 'Helvetica Neue', Helvetica, sans-serif;}
 .header {width: 100%; padding-top: 24px; padding-bottom: 0px;}
 .header-div {border-bottom: #e0e0e0 1px solid; padding-bottom: 20px; display: flex; align-items: flex-start;}
-.header-profile-picture {width: 120px; height: 120px; flex-shrink: 0; margin-right: 24px; border-radius: 50%; background-image: url(files/me.png); background-position: center; background-size: contain; background-repeat: no-repeat;}
+.header-profile-picture {width: 120px; height: 120px; flex-shrink: 0; margin-right: 24px; border-radius: 50%; background-image: url(files/me.jpg); background-position: center; background-size: contain; background-repeat: no-repeat;}
 .header-name h1 {margin-top: 10px; margin-bottom: 6px; line-height: 1.1;}
 .header-subtitle {margin-bottom: 10px;}
 .content {max-width: 860px; padding-left: 16px; padding-right: 16px; margin: auto; margin-top: 48px;}
