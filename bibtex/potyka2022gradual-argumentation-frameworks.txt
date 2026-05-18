@@ -1,0 +1,6 @@
+@inproceedings{Potyka2022GAFs,
+  author = {Potyka, Nico and Bazo, Mohamad and Spieler, Jonathan and Staab, Steffen},
+  booktitle = {ArgML@COMMA},
+  title = {Learning Gradual Argumentation Frameworks using Meta-heuristics.},
+  year = 2022
+}

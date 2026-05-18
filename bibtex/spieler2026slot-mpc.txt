@@ -1,0 +1,7 @@
+@article{Spieler2026Slot-MPC,
+	title={Slot-{MPC}: Goal-Conditioned Model Predictive Control with Object-Centric Representations}, 
+	author={Spieler, Jonathan and Villar-Corrales, Angel and Behnke, Sven},
+	journal={arXiv:2605.14937},
+	year={2026}
+}
+ 

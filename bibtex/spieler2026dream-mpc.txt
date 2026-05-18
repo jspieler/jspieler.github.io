@@ -1,0 +1,7 @@
+@inproceedings{Spieler2026Dream-MPC,
+	title={Dream-{MPC}: Gradient-Based Model Predictive Control with Latent Imagination}, 
+	author={Spieler, Jonathan and Behnke, Sven},
+	booktitle={International Conference on Machine Learning (ICML)},
+	year={2026}
+}
+ 

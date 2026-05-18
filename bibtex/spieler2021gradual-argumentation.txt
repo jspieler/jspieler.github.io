@@ -1,0 +1,7 @@
+@article{spieler2021learninggradualargumentationframeworks,
+      title={Learning Gradual Argumentation Frameworks using Genetic Algorithms}, 
+      author={Jonathan Spieler and Nico Potyka and Steffen Staab},
+      year={2021},
+      journal={arXiv:2106.13585},
+      url={https://arxiv.org/abs/2106.13585}, 
+}

@@ -1,0 +1,8 @@
+@inproceedings{Spieler2022GradualArgumentationFrameworks,
+  author       = {Jonathan Spieler and
+                  Nico Potyka and
+                  Steffen Staab},
+  title        = {Interpretable Machine Learning with Gradual Argumentation Frameworks},
+  booktitle    = {Computational Models of Argument ({COMMA})},
+  year         = {2022},
+}

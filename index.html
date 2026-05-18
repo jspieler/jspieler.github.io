@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jonathan Spieler">
+    <meta property="og:title" content="Jonathan Spieler">
+    <meta property="og:description" content="PhD candidate, University of Bonn">
+    <meta property="og:image" content="https://jspieler.github.io/files/me.jpg">
+    <meta property="og:url" content="https://jspieler.github.io/">
+    <title>Jonathan Spieler</title>
+    <link rel="apple-touch-icon" href="files/ais_logo_no-text.png">
+    <link rel="icon" type="image/png" href="files/ais_logo_no-text.png">
+    <link rel="manifest" href="files/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css?v=1.8">
+    <script>
+        function showBooks() {
+            var div = document.getElementById("hidden");
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            }
+            div.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        function scrollToContact() {
+            var div = document.getElementById("contact");
+            div.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            var header = document.querySelector(".header");
+            var nav = document.getElementById("sticky-nav");
+            var observer = new IntersectionObserver(function (entries) {
+                nav.classList.toggle("visible", !entries[0].isIntersecting);
+            }, { threshold: 0 });
+            observer.observe(header);
+            document.querySelectorAll(".stars[data-repo]").forEach(function (el) {
+                fetch("https://api.github.com/repos/" + el.dataset.repo)
+                    .then(function (r) { return r.json(); })
+                    .then(function (d) {
+                        if (d.stargazers_count) {
+                            var svg = el.querySelector(".gh-icon");
+                            el.textContent = " \u2605 " + d.stargazers_count.toLocaleString();
+                            if (svg) el.prepend(svg);
+                        }
+                    })
+                    .catch(function () { });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="sticky-nav noselect" id="sticky-nav">
+        <div class="sticky-nav-content">
+            <a class="sticky-nav-name bold" href="javascript:void(0);"
+                onclick="window.scrollTo({top:0,behavior:'smooth'})">Jonathan Spieler</a>
+            <div class="sticky-nav-links">
+                <a href="javascript:void(0);" onclick="scrollToContact()">Email</a>
+                <a
+                    href="https://scholar.google.com/citations?hl=en&user=EukywxYAAAAJ&view_op=list_works&sortby=pubdate">Scholar</a>
+                <a href="https://github.com/jspieler">GitHub</a>
+                <!-- <a href="files/cv.pdf">CV</a> -->
+            </div>
+        </div>
+    </nav>
+    <div class="header noselect">
+        <div class="header-div content row">
+            <div class="header-profile-picture"></div>
+            <div class="header-text">
+                <div class="header-name">
+                    <h1>Jonathan Spieler</h1>
+                </div>
+                <div class="header-subtitle">
+                    PhD Student, University of Bonn
+                </div>
+                <div class="header-links">
+                    <span class="header-links-row">
+                        <a class="btn" href="javascript:void(0);" onclick="scrollToContact()">Email</a> /
+                        <a class="btn"
+                            href="https://scholar.google.com/citations?hl=en&user=EukywxYAAAAJ&view_op=list_works&sortby=pubdate">Google
+                            Scholar</a> /
+                        <a class="btn" href="https://github.com/jspieler">GitHub</a>
+                    </span>
+                    <span class="header-links-separator"> / </span>
+                    <span class="header-links-row">
+                        <a class="btn" href="https://www.linkedin.com/in/jspieler">LinkedIn</a>
+                        <!-- <a class="btn" href="files/cv.pdf">CV</a> -->
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" style="padding-bottom: 64px;">
+        <div>
+            <p>
+                I am a second-year PhD student at the <a href="https://www.ais.uni-bonn.de/">Autonomous Intelligent
+                    Systems group</a> of the University of Bonn, advised by Professor <a
+                    href="https://www.ais.uni-bonn.de/behnke">Sven Behnke</a>. Before starting my PhD, I was working as a
+                software
+                engineer on autonomous driving.
+                I received my BEng degree from <a href="https://www.dhbw.de/english/home">Baden-Wuerttemberg Cooperative
+                    State University (DHBW)</a> and my MSc degree from the
+                <a href="https://www.uni-stuttgart.de/en/">University of Stuttgart</a>.
+            </p>
+            <p>I am broadly interested in advancing machine intelligence, with particular emphasis on the following
+                topics:</p>
+            <div class="interests">
+                <div class="interest">
+                    <div class="video-container">
+                        <video playsinline="" autoplay="" loop="" preload="metadata" muted="" width="100%">
+                            <source src="files/reinforcement-learning.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="interest-text">
+                        <span class="bold">World models & RL</span><br />
+                        <a href="https://dream-mpc.github.io">Dream-MPC</a>, <a
+                            href="https://.slot-mpc.github.io">Slot-MPC</a>
+                    </div>
+                </div>
+                <div class="interest">
+                    <div class="video-container">
+                        <video playsinline="" autoplay="" loop="" preload="metadata" muted="" width="100%">
+                            <source src="files/robot-learning.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="interest-text">
+                        <span class="interest-title bold">Robot learning</span><br />
+                    </div>
+                </div>
+            </div>
+            <br />
+            <p>
+                Besides research I also like cycling 🚴, bouldering 🧗, and <a href="javascript:void(0);"
+                    onclick="showBooks()">books</a>
+                📚.
+            </p>
+        </div>
+        <div>
+            <h2 class="noselect">Publications and preprints</h2>
+            <p>Papers sorted by recency. Representative papers are <span
+                    style="background-color: #fff8df">highlighted</span>.</p>
+            <div class="highlight publication row">
+                <div class="row-media" style="background-image: url(files/slot-mpc.png);"></div>
+                <div class="row-text">
+                    <a class="publication-title bold" href="https://slot-mpc.github.io">Slot-MPC: Goal-Conditioned
+                        Model Predictive Control with Object-Centric Representations</a><br />
+                    <span class="bold">Jonathan Spieler</span>, Angel Villar-Corrales, Sven Behnke<br />
+                    <span class="italic">Preprint</span>, 2026<br />
+                    <a class="btn btn-orange" href="https://slot-mpc.github.io">project page</a> / <a
+                        class="btn btn-red" href="https://arxiv.org/abs/2605.14937">arXiv</a> / <a class="btn"
+                        href="bibtex/spieler2026slot-mpc.txt">bibtex</a>
+                </div>
+            </div>
+            <div class="highlight publication row">
+                <div class="row-media" style="background-image: url(files/dream-mpc.png);"></div>
+                <div class="row-text">
+                    <a class="publication-title bold" href="https://dream-mpc.github.io">Dream-MPC: Gradient-Based
+                        Model Predictive Control with Latent Imagination</a><br />
+                    <span class="bold">Jonathan Spieler</span>, Sven Behnke<br />
+                    <span class="italic">International Conference on Machine Learning (<a
+                            href="https://icml.cc">ICML</a>)</span>, 2026<br />
+                    <a class="btn btn-orange" href="https://dream-mpc.github.io">project page</a> / <a
+                        class="btn btn-red" href="https://arxiv.org/abs/2605.04568">arXiv</a> / <a class="btn"
+                        href="https://github.com/jspieler/dream-mpc">code</a> / <a class="btn" class="btn btn-dark"
+                        href="bibtex/spieler2026dream-mpc.txt">bibtex</a>
+                </div>
+            </div>
+            <div class="publication row">
+                <div class="row-media" style="background-image: url(files/gbag.png);"></div>
+                <div class="row-text">
+                    <a class="publication-title bold" href="https://ceur-ws.org/Vol-3208/paper7.pdf">Learning Gradual
+                        Argumentation Frameworks using Meta-heuristics.</a><br />
+                    Nico Potyka, Mohamad Bazo, <span class="bold">Jonathan Spieler</span>, Steffen Staab<br />
+                    <span class="italic">ArgML@COMMA</span>, 2022<br />
+                    <a class="btn btn-red" href="https://ceur-ws.org/Vol-3208/paper7.pdf">pdf</a> / <a class="btn"
+                        href="bibtex/potyka2022gradual-argumentation-frameworks.txt">bibtex</a>
+                </div>
+            </div>
+            <div class="publication row">
+                <div class="row-media" style="background-image: url(files/gbag.png);"></div>
+                <div class="row-text">
+                    <a class="publication-title bold"
+                        href="https://pdfs.semanticscholar.org/f338/ca67c7b6b010fcbddd2230192d4a8930f2e6.pdf">Interpretable
+                        Machine Learning with Gradual Argumentation Frameworks.</a><br />
+                    <span class="bold">Jonathan Spieler</span>, Nico Potyka, Steffen Staab<br />
+                    <span class="italic">International Conference on Computational Models of Argument (<a
+                            href="https://comma.csc.liv.ac.uk/">COMMA</a>)</span>, 2022<br />
+                    <a class="btn btn-red"
+                        href="https://pdfs.semanticscholar.org/f338/ca67c7b6b010fcbddd2230192d4a8930f2e6.pdf">pdf</a> /
+                    <a class="btn" href="https://github.com/jspieler/QBAF-Learning">code</a> / <a class="btn"
+                        class="btn btn-dark" href="bibtex/spieler2022gradual-argumentation.txt">bibtex</a>
+                </div>
+            </div>
+            <div class="publication row">
+                <div class="row-media" style="background-image: url(files/gbag.png);"></div>
+                <div class="row-text">
+                    <a class="publication-title bold"
+                        href="https://arxiv.org/abs/2106.13585">Learning gradual argumentation frameworks using genetic algorithms</a><br />
+                    <span class="bold">Jonathan Spieler</span>, Nico Potyka, Steffen Staab<br />
+                    <span class="italic">Preprint</span>, 2021<br />
+                    <a class="btn btn-red"
+                        href="https://arxiv.org/pdf/2106.13585">pdf</a> /
+                    <a class="btn" href="https://github.com/jspieler/QBAF-Learning">code</a> / <a class="btn"
+                        class="btn btn-dark" href="bibtex/spieler2021gradual-argumentation.txt">bibtex</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2 class="noselect">Selected open-source projects</h2>
+            <div class="publication row">
+                <div class="row-media" style="background-image: url(files/dream-mpc.png);"></div>
+                <div class="row-text">
+                    <a class="bold" href="https://github.com/jspieler/dream-mpc">Dream-MPC Official Implementation<span
+                            class="stars" data-repo="jspieler/dream-mpc"><svg class="gh-icon" viewBox="0 0 16 16"
+                                fill="currentColor">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                            </svg> &#9733; 775</span></a><br />
+                    <span class="bold">Jonathan Spieler</span>, Sven Behnke<br />
+                    May 2026<br />
+                    <a class="btn btn-orange" href="https://dream-mpc.github.io">project page</a> / <a
+                        class="btn btn-red" href="https://arxiv.org/abs/2605.04568">arXiv</a> / <a class="btn"
+                        href="https://github.com/jspieler/dream-mpc">code</a> / <a class="btn btn-dark"
+                        href="bibtex/spieler2026dream-mpc.txt">bibtex</a>
+                </div>
+            </div>
+        </div>
+        <div id="hidden" style="display: none;">
+            <h2 class="noselect">Book recommendations</h2>
+
+            <span class="bold">Fiction</span>
+            <ul>
+                <li>George Orwell, <span class="bold">Animal Farm</span></li>
+            </ul>
+
+            <span class="bold">Non-fiction</span>
+            <ul>
+                <li>Yuval Noah Harari, <span class="bold">Sapiens: A Brief History of Humankind</span></li>
+                <li>Richard S. Sutton & Andrew G. Barto, <span class="bold">Reinforcement Learning: An
+                        Introduction</span></li>
+            </ul>
+        </div>
+        <div id="contact" class="noselect">
+            <h2>Contact</h2>
+            You are welcome to contact me regarding my research! My email is <span class="bold">spieler</span> [at]
+            <span class="bold">ais.uni-bonn</span> [dot] de
+        </div>
+    </div>
+    <div class="footer noselect">
+        <div class="footer-content">
+            &copy; 2026 Jonathan Spieler. <a href="https://www.uni-bonn.de/en/imprint">Imprint</a>. No web trackers. Design is based on the website from <a
+                href="https://github.com/nicklashansen/nicklashansen.github.io">Nicklas Hansen</a>.
+        </div>
+    </div>
+</body>
+
+</html>
